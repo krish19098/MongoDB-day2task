@@ -1,0 +1,60 @@
+# users collection
+db.users.insertOne({
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "age": 25,
+  "role": "participant"
+})
+
+# codekata collection
+db.codekata.insertOne({
+  "title": "MongoDB Basics",
+  "description": "Introduction to MongoDB",
+  "difficulty": "easy",
+  "solutions": [
+    {
+      "user_id": ObjectId(),
+      "solution_text": "..."
+    }
+  ]
+})
+
+# attendance collection
+db.attendance.insertOne({
+  "user_id": ObjectId(),
+  "date": ISODate("2020-10-15"),
+  "status": "present"
+})
+
+# topics collection
+db.topics.insertOne({
+  "title": "MongoDB Basics",
+  "description": "Introduction to MongoDB",
+  "resources": ["link1", "link2"],
+  "month": "October"
+})
+
+# tasks collection
+db.tasks.insertOne({
+  "user_id": ObjectId(),
+  "title": "Assignment 1",
+  "description": "...",
+  "deadline": ISODate("2020-10-31"),
+  "submitted": false
+})
+
+# company_drives collection
+db.company_drives.insertOne({
+  "company_name": "XYZ Corp",
+  "date": ISODate("2020-10-20"),
+  "participants": [ObjectId()],
+  "results": "selected"
+})
+
+# mentors collection
+db.mentors.insertOne({
+  "name": "Mentor Name",
+  "email": "mentor@example.com",
+  "specialization": "MongoDB",
+  "mentees": [ObjectId()]
+})
